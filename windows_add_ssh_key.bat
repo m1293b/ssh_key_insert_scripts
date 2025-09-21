@@ -94,7 +94,8 @@ function Add-SshKey {
     Write-Host "`nAttempting to copy the key to $remoteAddress..." -ForegroundColor Cyan
     Write-Host "You will be prompted for the remote user's password."
 
-    $remoteCommand = "mkdir -p '$env:USERPROFILE\.ssh'; chmod 700 '$env:USERPROFILE\.ssh'; echo `"$publicKey`" >> '$env:USERPROFILE\.ssh\authorized_keys'; chmod 600 '$env:USERPROFILE\.ssh\authorized_keys'"
+    # Corrected remote command to use Linux-style paths
+    $remoteCommand = "mkdir -p ~/.ssh; chmod 700 ~/.ssh; echo `"$publicKey`" >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys"
     
     try {
         ssh $remoteAddress $remoteCommand
