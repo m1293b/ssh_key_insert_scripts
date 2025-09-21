@@ -70,6 +70,6 @@ This command runs the `add-ssh-key.sh` script.
 Open your terminal and run the command below.
 
 ```sh
-bash -c "$(curl -fsSL '[PASTE_YOUR_RAW_URL_HERE](https://raw.githubusercontent.com/m1293b/ssh_key_insert_scripts/refs/heads/main/linux_add_ssh_key.sh)')"
+bash -c "$(curl -fsSL 'https://raw.githubusercontent.com/m1293b/ssh_key_insert_scripts/refs/heads/main/linux_add_ssh_key.sh')"
 ```
     
