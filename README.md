@@ -2,9 +2,9 @@
 
 This repository contains scripts to simplify adding a local machine's SSH public key to a remote server for passwordless authentication.
 
-* `add-ssh-key.sh`: For Linux and macOS.
-* `add-ssh-key.bat`: A self-contained Batch/PowerShell hybrid script for Windows.
-* `add-ssh-key.ps1`: A pure PowerShell script, ideal for remote execution from GitHub.
+* `linux_add_ssh_key.sh`: For Linux and macOS.
+* `windows_add_ssh_key.bat`: A self-contained Batch/PowerShell hybrid script for Windows.
+* `windows_add_ssh_key.ps1`: A pure PowerShell script, ideal for remote execution from GitHub.
 
 ## Features
 
@@ -18,17 +18,17 @@ This repository contains scripts to simplify adding a local machine's SSH public
 
 ### For Windows
 
-Download the `add-ssh-key.bat` file and double-click it to run. It will open a console window and guide you through the process.
+Download the `windows_add_ssh_key.bat` file and double-click it to run. It will open a console window and guide you through the process.
 
 ### For Linux & macOS
 
 1.  Make the script executable:
     ```sh
-    chmod +x add-ssh-key.sh
+    chmod +x linux_add_ssh_key.sh
     ```
 2.  Run the script from your terminal:
     ```sh
-    ./add-ssh-key.sh
+    ./linux_add_ssh_key.sh
     ```
 
 ---
@@ -41,13 +41,7 @@ Run the scripts directly from GitHub without downloading any files.
 
 This command runs the pure PowerShell (`.ps1`) script.
 
-#### Step 1: Get the Raw URL
-
-1.  Navigate to the `add-ssh-key.ps1` file in your GitHub repository.
-2.  Click the **"Raw"** button in the top-right corner of the file view.
-3.  Copy the URL from your browser's address bar. It should start with `https://raw.githubusercontent.com/...`
-
-#### Step 2: Run the Command
+#### Step 1: Run the Command
 
 Open a **PowerShell** terminal and run the command below.
 
@@ -57,15 +51,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager
 
 ### Linux & macOS
 
-This command runs the `add-ssh-key.sh` script.
+This command runs the `linux_add_ssh_key.sh` script.
 
-#### Step 1: Get the Raw URL
-
-1.  Navigate to the `add-ssh-key.sh` file in your GitHub repository.
-2.  Click the **"Raw"** button.
-3.  Copy the URL from your browser's address bar.
-
-#### Step 2: Run the Command
+#### Step 1: Run the Command
 
 Open your terminal and run the command below.
 
