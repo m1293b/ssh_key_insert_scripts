@@ -49,7 +49,7 @@ Print-Header
 $keyPath = "$env:USERPROFILE\.ssh\*.pub"
 
 # 1. Check if an SSH key already exists
-if (Test-Path $keyPath) {
+if (Test-Path -Path $keyPath) {
     Write-Host "An existing SSH public key was found:" -ForegroundColor Green
     Write-Host "-----------------------------------------------------" -ForegroundColor Gray
     Get-Content $keyPath | Write-Host
@@ -134,5 +134,6 @@ else {
     Write-Host '  - The remote server has SSH enabled and allows public key authentication.' -ForegroundColor Red
     Write-Host '  - The OpenSSH Client is installed on your Windows machine.' -ForegroundColor Red
 }
+
 
 
