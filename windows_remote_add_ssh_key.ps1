@@ -17,10 +17,10 @@ function Print-Header {
 Clear-Host
 Print-Header
 
-$keyPath = "$env:USERPROFILE\.ssh\id_rsa.pub"
+$keyPath = "$env:USERPROFILE\.ssh\*.pub"
 
 # 1. Check if an SSH key already exists
-if (Test-Path $keyPath) {
+if (Test-Path -Path $keyPath) {
     Write-Host "An existing SSH public key was found:" -ForegroundColor Green
     Write-Host "-----------------------------------------------------" -ForegroundColor Gray
     Get-Content $keyPath | Write-Host
