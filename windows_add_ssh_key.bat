@@ -46,7 +46,7 @@ function Print-Header {
 # --- Main Script ---
 Print-Header
 
-$keyPath = "$env:USERPROFILE\.ssh\id_rsa.pub"
+$keyPath = "$env:USERPROFILE\.ssh\*.pub"
 
 # 1. Check if an SSH key already exists
 if (Test-Path $keyPath) {
@@ -134,4 +134,5 @@ else {
     Write-Host '  - The remote server has SSH enabled and allows public key authentication.' -ForegroundColor Red
     Write-Host '  - The OpenSSH Client is installed on your Windows machine.' -ForegroundColor Red
 }
+
 
